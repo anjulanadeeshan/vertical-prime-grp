@@ -1,0 +1,17 @@
+<svg viewBox="0 0 1024 768" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="768" fill="#E31E24"/>
+  <!-- Logo icon -->
+  <g transform="translate(512, 200)">
+    <!-- Main icon structure -->
+    <polygon points="0,-80 -30,-60 -30,60 0,80 30,60 30,-60" fill="white"/>
+    <polygon points="0,-80 30,-60 30,-40 0,-20 -30,-40 -30,-60" fill="white"/>
+    <polygon points="-30,-20 -30,40 0,60 30,40 30,-20 0,0" fill="white"/>
+    <circle cx="0" cy="10" r="15" fill="#E31E24"/>
+  </g>
+  <!-- Text -->
+  <text x="512" y="450" font-family="Arial, sans-serif" font-size="100" font-weight="bold" fill="white" text-anchor="middle">VERTICAL</text>
+  <text x="512" y="550" font-family="Arial, sans-serif" font-size="100" font-weight="bold" fill="white" text-anchor="middle">PRIME</text>
+  <line x1="300" y1="590" x2="440" y2="590" stroke="white" stroke-width="4"/>
+  <text x="512" y="630" font-family="Arial, sans-serif" font-size="50" font-weight="normal" fill="white" text-anchor="middle" letter-spacing="10">GROUP</text>
+  <line x1="584" y1="590" x2="724" y2="590" stroke="white" stroke-width="4"/>
+</svg>
