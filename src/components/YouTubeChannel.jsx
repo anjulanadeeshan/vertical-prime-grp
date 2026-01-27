@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import nilameyiLogo from '../assets/nilamei-manikei.jpeg';
 
 const YouTubeChannel = () => {
+    const [showAllTestimonials, setShowAllTestimonials] = useState(false);
     // const channelStats = [
     //     { icon: '👥', number: '10K+', label: 'Subscribers' },
     //     { icon: '🎥', number: '200+', label: 'Videos' },
@@ -194,6 +196,230 @@ const YouTubeChannel = () => {
                 {/* Featured Videos Section */}
 
 
+
+                {/* Student Testimonials Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-16"
+                >
+                    <h3 className="text-3xl font-bold mb-4 text-center">
+                        What Our Students Say
+                    </h3>
+                    <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                        Real experiences from Sri Lankan students who trusted Vertical Prime Group for their educational journey
+                    </p>
+
+                    {/* Testimonials Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {/* Testimonial 1 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                        >
+                            <div className="flex items-center gap-1 mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                ))}
+                            </div>
+                            <p className="text-gray-700 mb-4 italic">
+                                "Rendid made my dream of studying medicine in Malaysia a reality. The entire process was smooth and the team was incredibly supportive throughout my visa application."
+                            </p>
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                                    SK
+                                </div>
+                                <div>
+                                    <p className="font-bold text-gray-900">Saman Kumara</p>
+                                    <p className="text-sm text-gray-600">MBBS Student, LUC</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Testimonial 2 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                        >
+                            <div className="flex items-center gap-1 mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                ))}
+                            </div>
+                            <p className="text-gray-700 mb-4 italic">
+                                "Wisdom Education Center guided me every step of the way. From choosing the right program to settling in Malaysia, they were always there to help. Highly recommended!"
+                            </p>
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
+                                    NP
+                                </div>
+                                <div>
+                                    <p className="font-bold text-gray-900">Nimal Perera</p>
+                                    <p className="text-sm text-gray-600">MBA Student, LUC</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Testimonial 3 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                        >
+                            <div className="flex items-center gap-1 mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                ))}
+                            </div>
+                            <p className="text-gray-700 mb-4 italic">
+                                "The Nilameyi Manikeyi YouTube channel was a lifesaver! Their videos helped me prepare all my documents correctly. Now I'm studying in Malaysia thanks to their guidance."
+                            </p>
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                                    TF
+                                </div>
+                                <div>
+                                    <p className="font-bold text-gray-900">Tharushi Fernando</p>
+                                    <p className="text-sm text-gray-600">Engineering Student, LUC</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Additional Testimonials - Conditionally Rendered */}
+                        {showAllTestimonials && (
+                            <>
+                                {/* Testimonial 4 */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ delay: 0.1 }}
+                                    className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                                >
+                                    <div className="flex items-center gap-1 mb-4">
+                                        {[...Array(5)].map((_, i) => (
+                                            <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        ))}
+                                    </div>
+                                    <p className="text-gray-700 mb-4 italic">
+                                        "Professional service from start to finish. Vertical Prime Group's team handled everything efficiently. I'm now pursuing my Bachelor's degree worry-free!"
+                                    </p>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold">
+                                            AR
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-gray-900">Amila Rajapaksha</p>
+                                            <p className="text-sm text-gray-600">Business Student, LUC</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Testimonial 5 */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ delay: 0.2 }}
+                                    className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                                >
+                                    <div className="flex items-center gap-1 mb-4">
+                                        {[...Array(5)].map((_, i) => (
+                                            <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        ))}
+                                    </div>
+                                    <p className="text-gray-700 mb-4 italic">
+                                        "Best decision I made was choosing Rendid for my education abroad. They are government-approved and truly trustworthy. My parents were also very satisfied with their service."
+                                    </p>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                                            DS
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-gray-900">Dilshan Silva</p>
+                                            <p className="text-sm text-gray-600">Pharmacy Student, LUC</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Testimonial 6 */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ delay: 0.3 }}
+                                    className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                                >
+                                    <div className="flex items-center gap-1 mb-4">
+                                        {[...Array(5)].map((_, i) => (
+                                            <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        ))}
+                                    </div>
+                                    <p className="text-gray-700 mb-4 italic">
+                                        "Excellent support throughout the admission process. The team at Wisdom Education Center answered all my questions patiently and helped me secure my place at Lincoln University."
+                                    </p>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                                            KW
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-gray-900">Kavindi Wickramasinghe</p>
+                                            <p className="text-sm text-gray-600">Nursing Student, LUC</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </>
+                        )}
+                    </div>
+
+                    {/* Show More/Less Button */}
+                    <div className="text-center mt-8">
+                        <motion.button
+                            onClick={() => setShowAllTestimonials(!showAllTestimonials)}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300"
+                        >
+                            {showAllTestimonials ? (
+                                <>
+                                    Show Less
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                                    </svg>
+                                </>
+                            ) : (
+                                <>
+                                    Show More Testimonials
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </>
+                            )}
+                        </motion.button>
+                    </div>
+                </motion.div>
+
                 {/* CTA Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -201,36 +427,36 @@ const YouTubeChannel = () => {
                     viewport={{ once: true }}
                     className="bg-gradient-to-r from-red-600 via-pink-600 to-red-600 rounded-3xl p-12 text-center text-white shadow-2xl"
                 >
-                    <h3 className="text-4xl font-bold mb-4">Join Our Community!</h3>
+                    <h3 className="text-4xl font-bold mb-4">Ready to Start Your Journey?</h3>
                     <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                        Subscribe to get the latest updates, tips, and real experiences from Sri Lankan students in Malaysia
+                        Join thousands of successful Sri Lankan students who trusted Vertical Prime Group for their education abroad
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <motion.a
+                            href="#agencies"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-flex items-center gap-3 bg-white text-red-600 px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300"
+                        >
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Apply Now
+                        </motion.a>
                         <motion.a
                             href="https://www.youtube.com/@NilameyiManikeyi"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="inline-flex items-center gap-3 bg-white text-red-600 px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300"
-                        >
-                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                            </svg>
-                            Subscribe on YouTube
-                        </motion.a>
-                        <motion.a
-                            href="https://www.instagram.com/nilameyimanikeyi"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
                             className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300"
                         >
-                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            Follow on Instagram
+
+                            watch student stories
                         </motion.a>
                     </div>
                 </motion.div>

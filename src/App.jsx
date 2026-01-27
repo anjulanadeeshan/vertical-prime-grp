@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import EducationalAgencies from './components/EducationalAgencies';
 import LincolnUniversity from './components/LincolnUniversity';
 import YouTubeChannel from './components/YouTubeChannel';
+import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import { WhatsAppWidget } from './components/ProfessionalFeatures';
 import './App.css';
@@ -16,6 +17,7 @@ function App() {
         <EducationalAgencies />
         <LincolnUniversity />
         <YouTubeChannel />
+        <ContactPage />
       </main>
       <Footer />
       <WhatsAppWidget />
