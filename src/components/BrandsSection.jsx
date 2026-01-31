@@ -63,7 +63,7 @@ const BrandsSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.4, duration: 0.6 }}
-                        className="text-lg sm:text-xl text-gray-700 leading-relaxed text-center md:text-justify"
+                        className="text-lg sm:text-xl text-gray-700 leading-relaxed text-center"
                     >
                         Vertical Prime Group is a multi-company business group that manages and develops ventures across diverse industries, including a specialized vertical of educational agencies dedicated to guiding students toward academic excellence and global opportunities. Through strategic leadership and a unified vision, the Group supports its various companies in achieving sustainable growth, operational excellence, and long-term success.
                     </motion.p>
