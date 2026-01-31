@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 import { WhatsAppWidget } from './components/ProfessionalFeatures';
 import RendidPage from './pages/RendidPage';
 import WECPage from './pages/WECPage';
-import NilameiManikeiPage from './pages/NilameiManikeiPage';
 import './App.css';
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
         {/* Brand Pages */}
         <Route path="/rendid" element={<RendidPage />} />
         <Route path="/wec" element={<WECPage />} />
-        <Route path="/nilamei-manikei" element={<NilameiManikeiPage />} />
       </Routes>
       <Footer />
       <WhatsAppWidget />

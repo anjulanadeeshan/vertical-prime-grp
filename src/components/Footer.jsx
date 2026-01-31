@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const Footer = () => {
@@ -51,30 +52,30 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#home" className="hover:text-red-500 transition-colors duration-300 flex items-center gap-2 group">
+              <li><Link to="/#home" className="hover:text-red-500 transition-colors duration-300 flex items-center gap-2 group">
                 <span className="w-0 group-hover:w-2 h-0.5 bg-red-500 transition-all duration-300"></span>
                 Home
-              </a></li>
-              <li><a href="#agencies" className="hover:text-red-500 transition-colors duration-300 flex items-center gap-2 group">
+              </Link></li>
+              <li><Link to="/#brands" className="hover:text-red-500 transition-colors duration-300 flex items-center gap-2 group">
                 <span className="w-0 group-hover:w-2 h-0.5 bg-red-500 transition-all duration-300"></span>
-                Our Agencies
-              </a></li>
-              <li><a href="#lincoln-university" className="hover:text-red-500 transition-colors duration-300 flex items-center gap-2 group">
+                Our Brands
+              </Link></li>
+              <li><Link to="/#universities" className="hover:text-red-500 transition-colors duration-300 flex items-center gap-2 group">
                 <span className="w-0 group-hover:w-2 h-0.5 bg-red-500 transition-all duration-300"></span>
-                Lincoln University
-              </a></li>
-              <li><a href="#youtube-channel" className="hover:text-red-500 transition-colors duration-300 flex items-center gap-2 group">
+                Universities
+              </Link></li>
+              <li><Link to="/#youtube-channel" className="hover:text-red-500 transition-colors duration-300 flex items-center gap-2 group">
                 <span className="w-0 group-hover:w-2 h-0.5 bg-red-500 transition-all duration-300"></span>
                 Student Life
-              </a></li>
+              </Link></li>
             </ul>
           </div>
 
-          {/* Our Agencies */}
+          {/* Our Brands */}
           <div>
             <h4 className="font-bold text-lg mb-6 flex items-center gap-2">
               <span className="w-1 h-6 bg-red-600 rounded-full"></span>
-              Our Agencies
+              Our Brands
             </h4>
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-start gap-2">

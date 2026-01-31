@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import heroImage from '../assets/vertical-hero image.PNG';
 import aestheticFashionHome from '../assets/Aesthetic Fashion-home.png';
@@ -114,25 +115,25 @@ const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center pt-8"
           >
-            <a
-              href="#agencies"
+            <Link
+              to="/#brands"
               className="group relative bg-white text-red-700 px-10 py-4 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center"
             >
               <span className="flex items-center justify-center gap-2">
-                Explore Our Agencies
+                Explore Our Brands
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </a>
-            <a
-              href="#lincoln-university"
+            </Link>
+            <Link
+              to="/#universities"
               className="group bg-transparent border-2 border-white text-white px-10 py-4 rounded-xl font-bold hover:bg-white hover:text-red-700 transition-all duration-300 transform hover:scale-105 text-center"
             >
               <span className="flex items-center justify-center gap-2">
                 View Programs
               </span>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Stats Grid - Simplified */}

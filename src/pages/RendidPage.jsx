@@ -14,9 +14,9 @@ const RendidPage = () => {
     ];
 
     const scrollToUniversity = () => {
-        navigate('/#lincoln-university');
+        navigate('/#universities');
         setTimeout(() => {
-            const universitySection = document.getElementById('lincoln-university');
+            const universitySection = document.getElementById('universities');
             if (universitySection) {
                 universitySection.scrollIntoView({ behavior: 'smooth' });
             }

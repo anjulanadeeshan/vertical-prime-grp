@@ -24,14 +24,14 @@ const BrandsSection = () => {
         {
             logo: nilameiLogo,
             name: 'Nilamei Manikei',
-            tagline: 'Excellence in Education',
-            description: 'Dedicated to empowering students with knowledge and opportunities for long-term success.',
-            link: '/nilamei-manikei',
+            tagline: 'EOur Journey, Your Guide to Malaysia',
+            description: 'Welcome to Nilameyi Manikeyi! We’re a Sri Lankan student couple sharing our life, travels, and study journey in Malaysia. Subscribe for practical tips and an authentic look at the joys and challenges of living abroad!',
+            link: '/#youtube-channel',
         },
     ];
 
     return (
-        <section className="relative bg-white py-20">
+        <section id="brands" className="relative bg-white py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Title Section */}
                 <motion.div
@@ -93,7 +93,7 @@ const BrandsSection = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.8 + index * 0.2, duration: 0.6 }}
                             whileHover={{ y: -10 }}
-                            className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                            className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
                         >
                             {/* Brand Logo */}
                             <div className="mb-6 flex items-center justify-center h-32">
@@ -115,7 +115,7 @@ const BrandsSection = () => {
                             </p>
 
                             {/* Description */}
-                            <p className="text-gray-600 text-sm leading-relaxed text-center">
+                            <p className="text-gray-600 text-sm leading-relaxed text-center flex-grow">
                                 {brand.description}
                             </p>
 
