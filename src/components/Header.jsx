@@ -16,8 +16,8 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Our Agencies', href: '#agencies' },
-    { name: 'Lincoln University', href: '#lincoln-university' },
+    { name: 'Our brands', href: '#brands' },
+    { name: 'Universities', href: '#universities' },
     { name: 'Student Life', href: '#youtube-channel' },
     { name: 'Contact', href: '#contact' },
   ];

@@ -1,24 +1,38 @@
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import EducationalAgencies from './components/EducationalAgencies';
+import BrandsSection from './components/BrandsSection';
 import LincolnUniversity from './components/LincolnUniversity';
 import YouTubeChannel from './components/YouTubeChannel';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import { WhatsAppWidget } from './components/ProfessionalFeatures';
+import RendidPage from './pages/RendidPage';
+import WECPage from './pages/WECPage';
+import NilameiManikeiPage from './pages/NilameiManikeiPage';
 import './App.css';
 
 function App() {
   return (
     <div id="home" className="min-h-screen bg-white">
       <Header />
-      <main className="pt-20">
-        <HeroSection />
-        <EducationalAgencies />
-        <LincolnUniversity />
-        <YouTubeChannel />
-        <ContactPage />
-      </main>
+      <Routes>
+        {/* Home Page */}
+        <Route path="/" element={
+          <main className="pt-20">
+            <HeroSection />
+            <BrandsSection />
+            <LincolnUniversity />
+            <YouTubeChannel />
+            <ContactPage />
+          </main>
+        } />
+
+        {/* Brand Pages */}
+        <Route path="/rendid" element={<RendidPage />} />
+        <Route path="/wec" element={<WECPage />} />
+        <Route path="/nilamei-manikei" element={<NilameiManikeiPage />} />
+      </Routes>
       <Footer />
       <WhatsAppWidget />
     </div>
