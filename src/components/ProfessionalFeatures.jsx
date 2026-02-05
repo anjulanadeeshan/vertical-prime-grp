@@ -32,7 +32,7 @@ const IntakeCountdown = () => {
 const WhatsAppWidget = () => {
   return (
     <motion.a
-      href="https://wa.me/94724162649text=Hello!%20I%20want%20to%20know%20more%20about%20studying%20at%20Lincoln%20University%20College"
+      href="https://wa.me/94724162649?text=Hello!%20I%20want%20to%20know%20more%20about%20studying%20at%20Lincoln%20University%20College"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0 }}
