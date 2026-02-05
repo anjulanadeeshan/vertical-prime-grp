@@ -7,86 +7,106 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BRANDS } from '@/data/brands';
-import { fadeInUp, scaleIn, hoverLift, ANIMATION_DURATION, STAGGER_DELAY } from '@/constants/animations';
+import { hoverLift, ANIMATION_DURATION, STAGGER_DELAY } from '@/constants/animations';
 import LazyImage from '@/components/common/LazyImage';
+import vpgLogo from '@/assets/IMG_9292.PNG';
 
 const BrandsSection: React.FC = () => {
     return (
         <section
             id="brands"
-            className="relative bg-white py-20"
+            className="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 py-20"
             aria-labelledby="brands-heading"
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Title Section */}
                 <motion.div
-                    initial="initial"
-                    whileInView="animate"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    variants={fadeInUp}
-                    transition={{ duration: ANIMATION_DURATION.normal }}
-                    className="text-center mb-16"
+                    transition={{ delay: 0.2 }}
+                    className="text-center mb-4"
                 >
-                    <h2 id="brands-heading" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                        Your Trusted Partners in{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
-                            Education
-                        </span>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
+                        Our Brands
                     </h2>
                 </motion.div>
-
-                {/* VPG Description */}
                 <motion.div
-                    initial="initial"
-                    whileInView="animate"
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    whileInView={{ opacity: 1, scaleX: 1 }}
                     viewport={{ once: true }}
-                    variants={fadeInUp}
-                    transition={{ duration: ANIMATION_DURATION.slow }}
-                    className="text-center max-w-6xl mx-auto mb-16"
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    className="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto rounded-full mb-6 sm:mb-10"
+                />
+                {/* Vertical Prime Group - Parent Company Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-10 sm:mb-12"
                 >
+                    {/* VPG Logo */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.6 }}
+                        className="flex justify-center mb-6"
+                    >
+                        <img
+                            src={vpgLogo}
+                            alt="Vertical Prime Group"
+                            className="h-24 sm:h-32 lg:h-40 w-auto object-contain mx-auto"
+                        />
+                    </motion.div>
+
+                    {/* VPG Tagline */}
                     <motion.p
-                        variants={fadeInUp}
-                        transition={{ delay: 0.4, duration: ANIMATION_DURATION.normal }}
-                        className="text-lg sm:text-xl text-gray-700 leading-relaxed text-center"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
+                        className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-600 mb-6 uppercase tracking-wide"
+                    >
+                        Where Vision Becomes Reality
+                    </motion.p>
+
+                    {/* VPG Description */}
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.6 }}
+                        className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto"
                     >
                         Vertical Prime Group is a multi-company business group that manages and develops ventures across diverse industries, including a specialized vertical of educational agencies dedicated to guiding students toward academic excellence and global opportunities. Through strategic leadership and a unified vision, the Group supports its various companies in achieving sustainable growth, operational excellence, and long-term success.
                     </motion.p>
                 </motion.div>
 
-                {/* Our Brands Title */}
-                <motion.div
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    variants={fadeInUp}
-                    transition={{ delay: 0.6, duration: ANIMATION_DURATION.normal }}
-                    className="text-center mb-12"
-                >
-                    <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">
-                        Our Brands
-                    </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-rose-600 mx-auto rounded-full" aria-hidden="true" />
-                </motion.div>
+                {/* Divider */}
 
-                {/* Brands Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                {/* Our Brands Title */}
+
+
+                {/* Brands Grid - 3 Subsidiary Companies */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
                     {BRANDS.map((brand, index) => (
                         <motion.div
                             key={brand.id}
-                            initial="initial"
-                            whileInView="animate"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            variants={scaleIn}
-                            transition={{ delay: 0.8 + index * STAGGER_DELAY.medium, duration: ANIMATION_DURATION.normal }}
+                            transition={{ delay: 1.2 + index * STAGGER_DELAY.medium, duration: ANIMATION_DURATION.normal }}
                             whileHover={hoverLift}
-                            className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
+                            className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col h-full items-center"
                         >
                             {/* Brand Logo */}
                             <div className="mb-6 flex items-center justify-center h-32">
                                 <LazyImage
                                     src={brand.logo}
                                     alt={`${brand.name} logo`}
-                                    className="max-w-full max-h-full object-contain"
+                                    className="max-w-full max-h-full object-contain mx-auto"
                                     loading="lazy"
                                 />
                             </div>

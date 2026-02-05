@@ -32,7 +32,7 @@ const IntakeCountdown = () => {
 const WhatsAppWidget = () => {
   return (
     <motion.a
-      href="https://wa.me/94712345678?text=Hello!%20I%20want%20to%20know%20more%20about%20studying%20at%20Lincoln%20University%20College"
+      href="https://wa.me/94724162649text=Hello!%20I%20want%20to%20know%20more%20about%20studying%20at%20Lincoln%20University%20College"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0 }}
@@ -121,9 +121,8 @@ const DocumentChecklist = () => {
                   onClick={() => toggleItem(item.id)}
                   className="flex items-center gap-4 p-4 rounded-lg border-2 border-gray-200 hover:border-primary-red transition-all duration-300 cursor-pointer group"
                 >
-                  <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${
-                    item.checked ? 'bg-primary-red border-primary-red' : 'border-gray-300 group-hover:border-primary-red'
-                  }`}>
+                  <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${item.checked ? 'bg-primary-red border-primary-red' : 'border-gray-300 group-hover:border-primary-red'
+                    }`}>
                     {item.checked && (
                       <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />

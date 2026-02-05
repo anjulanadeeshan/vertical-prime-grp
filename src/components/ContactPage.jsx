@@ -47,7 +47,7 @@ const ContactPage = () => {
             `*Message:* ${formData.message || 'N/A'}`;
 
         // WhatsApp number (replace with actual number)
-        const whatsappNumber = '94712345678';
+        const whatsappNumber = '94724162649';
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
         // Open WhatsApp

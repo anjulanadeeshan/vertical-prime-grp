@@ -77,7 +77,7 @@ const LincolnUniversity: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
-                                className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6"
+                                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
                             >
                                 Where{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
@@ -92,7 +92,7 @@ const LincolnUniversity: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4 }}
-                                className="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed"
+                                className="text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 text-gray-200 leading-relaxed"
                             >
                                 Join 15,000+ international students at Malaysia&apos;s premier university.
                                 Experience world-class education with globally recognized programs.
@@ -107,13 +107,13 @@ const LincolnUniversity: React.FC = () => {
                             >
                                 <a
                                     href="#programs-section"
-                                    className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-red-500/50"
+                                    className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-red-500/50"
                                 >
                                     Explore Programs
                                 </a>
                                 <a
                                     href="#contact"
-                                    className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300"
+                                    className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white/20 transition-all duration-300"
                                 >
                                     Apply Now
                                 </a>
@@ -125,30 +125,30 @@ const LincolnUniversity: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.6 }}
-                                className="grid grid-cols-3 gap-6 mt-12"
+                                className="grid grid-cols-3 gap-3 sm:gap-6 mt-6 sm:mt-8 lg:mt-12"
                             >
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-red-500">15,000+</div>
-                                    <div className="text-sm text-gray-300 mt-1">Students</div>
+                                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500">15,000+</div>
+                                    <div className="text-xs sm:text-sm text-gray-300 mt-1">Students</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-red-500">60+</div>
-                                    <div className="text-sm text-gray-300 mt-1">Countries</div>
+                                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500">60+</div>
+                                    <div className="text-xs sm:text-sm text-gray-300 mt-1">Countries</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-red-500">100+</div>
-                                    <div className="text-sm text-gray-300 mt-1">Programs</div>
+                                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500">100+</div>
+                                    <div className="text-xs sm:text-sm text-gray-300 mt-1">Programs</div>
                                 </div>
                             </motion.div>
                         </motion.div>
 
-                        {/* Right: Ranking Stats Grid */}
+                        {/* Right: Ranking Stats Grid - Hidden on mobile, shown on lg+ */}
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mt-8 lg:mt-0 max-w-lg mx-auto"
+                            className="hidden lg:grid grid-cols-2 gap-4 lg:gap-6 max-w-lg mx-auto"
                         >
                             {RANKINGS.map((item, index) => (
                                 <motion.div
@@ -184,6 +184,43 @@ const LincolnUniversity: React.FC = () => {
 
                 </div>
             </div>
+
+            {/* Ranking Stats - Mobile Only (outside hero) */}
+            <div className="lg:hidden bg-gradient-to-br from-gray-900 to-gray-800 py-12 -mt-1">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="grid grid-cols-2 gap-4 max-w-lg mx-auto"
+                    >
+                        {RANKINGS.map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-xl"
+                            >
+                                <div className="text-center">
+                                    <div className="text-3xl mb-2" aria-hidden="true">
+                                        {item.icon}
+                                    </div>
+                                    <div className="text-base font-bold text-white mb-1 leading-tight">
+                                        {item.rank}
+                                    </div>
+                                    <div className="text-[10px] text-gray-200 font-semibold uppercase tracking-wide">
+                                        {item.category}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            </div>
+
 
             {/* Programs Section */}
             <div id="programs-section" className="pt-32 lg:pt-40 pb-20 bg-white">
