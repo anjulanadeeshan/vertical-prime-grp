@@ -317,47 +317,6 @@ const YouTubeChannel = () => {
                         </motion.button>
                     </div>
                 </motion.div>
-
-                {/* CTA Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-gradient-to-r from-red-600 via-pink-600 to-red-600 rounded-3xl p-12 text-center text-white shadow-2xl"
-                >
-                    <h3 className="text-4xl font-bold mb-4">Ready to Start Your Journey?</h3>
-                    <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                        Join thousands of successful Sri Lankan students who trusted Vertical Prime Group for their education abroad
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <motion.a
-                            href="#agencies"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="inline-flex items-center gap-3 bg-white text-red-600 px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300"
-                        >
-                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            Apply Now
-                        </motion.a>
-                        <motion.a
-                            href="https://www.youtube.com/@NilameyiManikeyi"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300"
-                        >
-                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-
-                            watch student stories
-                        </motion.a>
-                    </div>
-                </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

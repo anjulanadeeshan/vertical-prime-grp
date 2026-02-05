@@ -116,7 +116,7 @@ const HeroCarousel: React.FC = () => {
 
     return (
         <section
-            className="relative min-h-screen flex items-center justify-center overflow-hidden px-2 pb-2"
+            className="relative h-[100dvh] sm:h-screen flex items-center justify-center overflow-hidden px-2 pb-2"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             aria-label="Hero carousel"
@@ -160,7 +160,7 @@ const HeroCarousel: React.FC = () => {
                         exit="exit"
                         variants={fadeIn}
                         transition={{ duration: ANIMATION_DURATION.normal }}
-                        className="container mx-auto px-4 sm:px-6 lg:px-8 py-20"
+                        className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20"
                     >
                         <div className="max-w-5xl mx-auto text-center">
                             {/* Slide Content */}
@@ -169,17 +169,17 @@ const HeroCarousel: React.FC = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2, duration: ANIMATION_DURATION.normal }}
                             >
-                                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+                                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6">
                                     <span className={`text-transparent bg-clip-text bg-gradient-to-r ${SLIDES[currentSlide].gradient}`}>
                                         {SLIDES[currentSlide].title}
                                     </span>
                                 </h1>
 
-                                <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6">
+                                <p className="text-xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4 sm:mb-6">
                                     {SLIDES[currentSlide].subtitle}
                                 </p>
 
-                                <p className="text-lg sm:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                                <p className="text-base sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed line-clamp-3 sm:line-clamp-none">
                                     {SLIDES[currentSlide].description}
                                 </p>
 
@@ -188,7 +188,7 @@ const HeroCarousel: React.FC = () => {
                                     <a
                                         href={SLIDES[currentSlide].cta.primary.href}
                                         onClick={(e) => handleScrollToSection(e, SLIDES[currentSlide].cta.primary.href)}
-                                        className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-rose-600 text-white rounded-full font-bold text-lg shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105"
+                                        className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-rose-600 text-white rounded-full font-bold text-base sm:text-lg shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105"
                                     >
                                         {SLIDES[currentSlide].cta.primary.text}
                                         <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
@@ -197,7 +197,7 @@ const HeroCarousel: React.FC = () => {
                                     <a
                                         href={SLIDES[currentSlide].cta.secondary.href}
                                         onClick={(e) => handleScrollToSection(e, SLIDES[currentSlide].cta.secondary.href)}
-                                        className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                                        className="px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-full font-bold text-base sm:text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
                                     >
                                         {SLIDES[currentSlide].cta.secondary.text}
                                     </a>
@@ -210,23 +210,23 @@ const HeroCarousel: React.FC = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.4, duration: ANIMATION_DURATION.normal }}
-                                    className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
+                                    className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mt-8 sm:mt-16"
                                 >
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                                        <div className="text-4xl font-bold text-white mb-2">{BRAND_STATS.studentsPlaced}</div>
-                                        <div className="text-sm text-gray-300">Students Placed</div>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/20">
+                                        <div className="text-2xl sm:text-4xl font-bold text-white mb-1 sm:mb-2">{BRAND_STATS.studentsPlaced}</div>
+                                        <div className="text-[10px] sm:text-sm text-gray-300 uppercase tracking-wider">Students Placed</div>
                                     </div>
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                                        <div className="text-4xl font-bold text-white mb-2">{BRAND_STATS.successRate}</div>
-                                        <div className="text-sm text-gray-300">Success Rate</div>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/20">
+                                        <div className="text-2xl sm:text-4xl font-bold text-white mb-1 sm:mb-2">{BRAND_STATS.successRate}</div>
+                                        <div className="text-[10px] sm:text-sm text-gray-300 uppercase tracking-wider">Success Rate</div>
                                     </div>
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                                        <div className="text-4xl font-bold text-white mb-2">{BRAND_STATS.agencies}</div>
-                                        <div className="text-sm text-gray-300">Agencies</div>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/20">
+                                        <div className="text-2xl sm:text-4xl font-bold text-white mb-1 sm:mb-2">{BRAND_STATS.agencies}</div>
+                                        <div className="text-[10px] sm:text-sm text-gray-300 uppercase tracking-wider">Agencies</div>
                                     </div>
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                                        <div className="text-4xl font-bold text-white mb-2">{BRAND_STATS.support}</div>
-                                        <div className="text-sm text-gray-300">Support</div>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/20">
+                                        <div className="text-2xl sm:text-4xl font-bold text-white mb-1 sm:mb-2">{BRAND_STATS.support}</div>
+                                        <div className="text-[10px] sm:text-sm text-gray-300 uppercase tracking-wider">Support</div>
                                     </div>
                                 </motion.div>
                             )}
