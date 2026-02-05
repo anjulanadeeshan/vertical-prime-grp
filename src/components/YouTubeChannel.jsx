@@ -4,12 +4,6 @@ import nilameyiLogo from '../assets/nilamei-manikei.jpeg';
 
 const YouTubeChannel = () => {
     const [showAllTestimonials, setShowAllTestimonials] = useState(false);
-    // const channelStats = [
-    //     { icon: '👥', number: '10K+', label: 'Subscribers' },
-    //     { icon: '🎥', number: '200+', label: 'Videos' },
-    //     { icon: '👀', number: '1M+', label: 'Views' },
-    //     { icon: '🌍', number: '50+', label: 'Countries' }
-    // ];
 
     const featuredVideos = [
         {
@@ -83,15 +77,6 @@ const YouTubeChannel = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 bg-gradient-to-r from-red-50 to-pink-50 border border-red-200 text-red-700 px-6 py-3 rounded-full text-sm font-bold mb-6"
-                    >
-                        <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
-                        STUDENT COMMUNITY
-                    </motion.div>
                     <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                         Follow Our{' '}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">
@@ -104,94 +89,7 @@ const YouTubeChannel = () => {
                 </motion.div>
 
                 {/* Channel Info Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-16"
-                >
-                    <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100">
-                        <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-                            {/* Channel Logo */}
-                            <motion.div
-                                whileHover={{ scale: 1.1, rotate: 5 }}
-                                className="w-32 h-32 rounded-full overflow-hidden shadow-xl border-4 border-red-500 flex-shrink-0"
-                            >
-                                <img
-                                    src={nilameyiLogo}
-                                    alt="Nilameyi Manikeyi"
-                                    className="w-full h-full object-cover"
-                                />
-                            </motion.div>
 
-                            {/* Channel Info */}
-                            <div className="flex-1 text-center md:text-left">
-                                <h3 className="text-4xl font-bold mb-2">Nilameyi Manikeyi</h3>
-                                <p className="text-2xl text-gray-600 mb-4">නිලමෙයි මැණිකෙයි</p>
-                                <p className="text-lg text-gray-700 leading-relaxed">
-                                    <strong>Welcome to Nilameyi Manikeyi!</strong> We are a Sri Lankan married couple living in Malaysia as international students. On this channel, we share our daily life experiences, study abroad journey, Malaysian culture, travel adventures, and tips for Sri Lankan students living overseas.
-                                </p>
-                            </div>
-                        </div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="mb-16"
-                        >
-                            <h3 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
-                                Featured Videos
-                            </h3>
-
-                            {/* Video Grid - Responsive */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {featuredVideos.map((video, index) => (
-                                    <motion.div
-                                        key={video.id}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: index * 0.1 }}
-                                        className="group"
-                                    >
-                                        <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-                                            {/* YouTube Embed */}
-                                            <div className="relative aspect-video bg-gray-900">
-                                                <iframe
-                                                    src={`https://www.youtube.com/embed/${video.id}`}
-                                                    title={video.title}
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowFullScreen
-                                                    className="absolute inset-0 w-full h-full"
-                                                />
-                                            </div>
-
-                                            {/* Video Title */}
-                                            <div className="p-4">
-                                                <h4 className="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-red-600 transition-colors duration-300">
-                                                    {video.title}
-                                                </h4>
-                                                <a
-                                                    href={video.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-2 mt-3 text-red-600 hover:text-red-700 font-medium text-sm group/link"
-                                                >
-                                                    Watch on YouTube
-                                                    <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.div>
-
-                    </div>
-                </motion.div>
 
                 {/* Featured Videos Section */}
 
@@ -458,6 +356,94 @@ const YouTubeChannel = () => {
 
                             watch student stories
                         </motion.a>
+                    </div>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-16"
+                >
+                    <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100 mt-15">
+                        <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
+                            {/* Channel Logo */}
+                            <motion.div
+                                whileHover={{ scale: 1.1, rotate: 5 }}
+                                className="w-32 h-32 rounded-full overflow-hidden shadow-xl border-4 border-red-500 flex-shrink-0"
+                            >
+                                <img
+                                    src={nilameyiLogo}
+                                    alt="Nilameyi Manikeyi"
+                                    className="w-full h-full object-cover"
+                                />
+                            </motion.div>
+
+                            {/* Channel Info */}
+                            <div className="flex-1 text-center md:text-left">
+                                <h3 className="text-4xl font-bold mb-2">Nilameyi Manikeyi</h3>
+                                <p className="text-2xl text-gray-600 mb-4">නිලමෙයි මැණිකෙයි</p>
+                                <p className="text-lg text-gray-700 leading-relaxed">
+                                    <strong>Welcome to Nilameyi Manikeyi!</strong> We are a Sri Lankan married couple living in Malaysia as international students. On this channel, we share our daily life experiences, study abroad journey, Malaysian culture, travel adventures, and tips for Sri Lankan students living overseas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="mb-16"
+                        >
+                            <h3 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+                                Featured Videos
+                            </h3>
+
+                            {/* Video Grid - Responsive */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+                                {featuredVideos.map((video, index) => (
+                                    <motion.div
+                                        key={video.id}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.1 }}
+                                        className="group"
+                                    >
+                                        <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                                            {/* YouTube Embed */}
+                                            <div className="relative aspect-video bg-gray-900">
+                                                <iframe
+                                                    src={`https://www.youtube.com/embed/${video.id}`}
+                                                    title={video.title}
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen
+                                                    className="absolute inset-0 w-full h-full"
+                                                />
+                                            </div>
+
+                                            {/* Video Title */}
+                                            <div className="p-4">
+                                                <h4 className="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-red-600 transition-colors duration-300">
+                                                    {video.title}
+                                                </h4>
+                                                <a
+                                                    href={video.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 mt-3 text-red-600 hover:text-red-700 font-medium text-sm group/link"
+                                                >
+                                                    Watch on YouTube
+                                                    <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
+
                     </div>
                 </motion.div>
             </div>
