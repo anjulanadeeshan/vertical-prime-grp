@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { UNIVERSITY_INFO, PROGRAMS, RANKINGS, FACILITIES } from '@/data/programs';
 import { getWhatsAppLink } from '@/constants/contact';
-import { fadeInUp, fadeIn, scaleIn, ANIMATION_DURATION, STAGGER_DELAY } from '@/constants/animations';
+import { fadeInUp, fadeIn, ANIMATION_DURATION, STAGGER_DELAY } from '@/constants/animations';
 import type { TabType } from '@/types';
 import universityVideo from '@/assets/Cinematic_University_Promo_Video.mp4';
 import lincolnLogo from '@/assets/IMG_9739(2).PNG';
