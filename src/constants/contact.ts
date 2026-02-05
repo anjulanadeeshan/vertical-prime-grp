@@ -6,14 +6,13 @@
 export const CONTACT_INFO = {
     // Primary Contact
     phone: {
-        display: '+94 76 08 994 76', // UPDATE THIS
-        raw: '94760899476',
-        whatsapp: '94760899476', // UPDATE THIS
+        display: '+94 72 416 2649', // UPDATE THIS
+        raw: '94724162649',
+        whatsapp: '94724162649', // UPDATE THIS
     },
 
     email: {
-        primary: 'info@verticalprime.lk', // UPDATE THIS
-        support: 'support@verticalprime.lk', // UPDATE THIS
+        primary: 'Verticalprimegroup@gmail.com', // UPDATE THIS
     },
 
     address: {
@@ -24,8 +23,8 @@ export const CONTACT_INFO = {
 
     // Social Media
     social: {
-        facebook: 'https://www.facebook.com/share/1B1RNWGYti/?mibextid=wwXIfr', // UPDATE THIS
-        instagram: 'https://www.instagram.com/verticalprimegroup?igsh=N2poMWRrd2J1Z2xj&utm_source=qr',
+        facebook: 'https://web.facebook.com/people/Vertical-Prime-Group/61587054791281/', // UPDATE THIS
+        instagram: 'https://www.instagram.com/verticalprimegroup',
         youtube: 'https://www.youtube.com/@NilameyiManikeyi',
     },
 } as const;
