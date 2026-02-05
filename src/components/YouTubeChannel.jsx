@@ -364,7 +364,7 @@ const YouTubeChannel = () => {
                     viewport={{ once: true }}
                     className="mb-16"
                 >
-                    <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100 mt-15">
+                    <div id="nilameyi-channel" className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100 mt-20">
                         <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
                             {/* Channel Logo */}
                             <motion.div

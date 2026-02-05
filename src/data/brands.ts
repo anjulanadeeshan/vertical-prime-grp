@@ -47,7 +47,7 @@ export const BRANDS: Brand[] = [
         logo: nilameiLogo,
         tagline: 'Our Journey, Your Guide to Malaysia',
         description: 'Welcome to Nilameyi Manikeyi! We\'re a Sri Lankan student couple sharing our life, travels, and study journey in Malaysia. Subscribe for practical tips and an authentic look at the joys and challenges of living abroad!',
-        link: '/#youtube-channel',
+        link: '/#nilameyi-channel',
         color: 'red',
         gradient: 'from-red-600 to-pink-600',
     },

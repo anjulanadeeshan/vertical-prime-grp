@@ -64,7 +64,7 @@ const ContactPage = () => {
     };
 
     return (
-        <section id="contact" className="relative pt-24 pb-32 bg-gradient-to-br from-gray-50 via-white to-red-50 z-20">
+        <section id="contact" className="relative pt-20 pb-32 bg-gradient-to-br from-gray-50 via-white to-red-50 z-20">
             {/* Background Decorations */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <motion.div
@@ -101,15 +101,7 @@ const ContactPage = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 bg-gradient-to-r from-red-50 to-rose-50 border border-red-200 text-red-700 px-6 py-3 rounded-full text-sm font-bold mb-6"
-                    >
-                        <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
-                        GET IN TOUCH
-                    </motion.div>
+
                     <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                         Start Your{' '}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">
